@@ -1,0 +1,32 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-toolbar class = "toolbar" >
+     
+      <button type="button" class ="btn" mat-button (click)="drawer.toggle()">
+          <i class="material-icons md-48">list</i>
+      </button>
+      <span>Innovate</span>
+    </mat-toolbar>
+<mat-drawer #drawer class="example-sidenav" mode="side">
+    
+  <figure class="figure">
+        <span><img src="{{userImage}}"class="figure-img img-fluid rounded"></span>
+        <br><span>{{userId}}</span><br>
+        <span>{{userName}}</span>
+      </figure>
+  <ul class ="links">
+  
+    <li><button class="nav-btn" mat-button ><i class="material-icons">home</i>Home</button></li>
+    <li><button class="nav-btn" mat-button ><i class="material-icons">event</i>Events</button></li>
+    <li><button class="nav-btn" mat-button ><i class="material-icons">details</i>Details</button></li>
+    <li><button class="nav-btn" mat-button ><i class="material-icons">question_answer</i>FAQ</button></li>
+    <li><button class="nav-btn" mat-button (click) ="signOut()" ><i class="material-icons">power_settings_new</i>Logout</button></li>
+  </ul>
+</mat-drawer>
+
+
+
+<div class="example-sidenav-content">
+ 
+</div>
+
+</mat-drawer-container>
